@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://gbx21ym7krkj"]
+
+[ext_resource type="Texture2D" uid="uid://4mqoqld4xkr2" path="res://Images/ROCK.png" id="1_jbr3b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_byj5f"]
+atlas = ExtResource("1_jbr3b")
+region = Rect2(0, 0, 145, 109)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fyg62"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_byj5f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vctpt"]
+radius = 23.0
+height = 46.0
+
+[node name="Rock" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-2, 2)
+sprite_frames = SubResource("SpriteFrames_fyg62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 30)
+shape = SubResource("CapsuleShape2D_vctpt")
