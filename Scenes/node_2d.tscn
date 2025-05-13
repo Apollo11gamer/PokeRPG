@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://k2chriwmd0dt"]
+[gd_scene load_steps=12 format=4 uid="uid://k2chriwmd0dt"]
 
 [ext_resource type="Texture2D" uid="uid://bqt4c4s1ie5yy" path="res://Tilesets/objects.png" id="1_i3x4r"]
-[ext_resource type="Script" path="res://Tilesets/scripts/node_2d.gd" id="1_vdlh5"]
 [ext_resource type="Texture2D" uid="uid://blopx6waqp5rm" path="res://Tilesets/wooden.png" id="2_iurok"]
 [ext_resource type="Texture2D" uid="uid://d2ifba008kfv3" path="res://Tilesets/carpet.png" id="3_l05x3"]
 [ext_resource type="PackedScene" uid="uid://c453gdq7lo3yr" path="res://Scenes/Ash.tscn" id="6_kgmeo"]
@@ -290,7 +289,6 @@ texture = ExtResource("1_i3x4r")
 sources/0 = SubResource("TileSetAtlasSource_m6p58")
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_vdlh5")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_6f3pb")
@@ -306,3 +304,4 @@ tile_set = SubResource("TileSet_mqlve")
 
 [node name="CharacterBody2D2" parent="." instance=ExtResource("6_kgmeo")]
 position = Vector2(114, 127)
+script = null

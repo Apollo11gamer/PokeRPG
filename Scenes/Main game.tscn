@@ -1,13 +1,13 @@
 [gd_scene load_steps=14 format=3 uid="uid://dlikpfem3f6gv"]
 
-[ext_resource type="PackedScene" path="res://Scenes/player (2).tscn" id="1_74e1d"]
+[ext_resource type="PackedScene" uid="uid://bbfae1llehf4d" path="res://Scenes/player (2).tscn" id="1_74e1d"]
 [ext_resource type="Texture2D" uid="uid://gt7eq0cm5ubr" path="res://Tilesets/plains.png" id="1_j1awp"]
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_v56oc"]
 [ext_resource type="Texture2D" uid="uid://es4o1lxqcjm6" path="res://Tilesets/pixil-layer-Background (1).png" id="2_my77m"]
 [ext_resource type="Script" path="res://scripts/audio.gd" id="2_yfrtr"]
 [ext_resource type="AudioStream" uid="uid://pl33kbdx1xbb" path="res://Music/The Lost City of Atlantis_ Surface Shop Theme.mp3" id="3_fwgyk"]
-[ext_resource type="PackedScene" path="res://Scenes/Rock.tscn" id="3_uoybq"]
-[ext_resource type="PackedScene" path="res://Scenes/banananananana.tscn" id="4_wmab5"]
+[ext_resource type="PackedScene" uid="uid://gbx21ym7krkj" path="res://Scenes/Rock.tscn" id="3_uoybq"]
+[ext_resource type="PackedScene" uid="uid://b3abs3ko16f2s" path="res://Scenes/banananananana.tscn" id="4_wmab5"]
 
 [sub_resource type="AudioStreamPlaylist" id="AudioStreamPlaylist_nysb7"]
 stream_count = 1
@@ -175,7 +175,6 @@ bg_music = NodePath("BGmusic")
 stream = SubResource("AudioStreamInteractive_y0nb1")
 volume_db = -20.0
 autoplay = true
-bus = &"Music"
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ixxmg")
@@ -189,9 +188,11 @@ z_index = 20
 position = Vector2(581, 342)
 collision_layer = 0
 collision_mask = 0
+script = null
 
 [node name="Banananananana" parent="Enviornment" instance=ExtResource("4_wmab5")]
 position = Vector2(932, 515)
+script = null
 
 [node name="Rock" parent="Enviornment" instance=ExtResource("3_uoybq")]
 z_index = 20

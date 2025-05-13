@@ -1,11 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://egbt2iwws6jw"]
 
-[ext_resource type="Texture2D" uid="uid://cn7ay1l8snsve" path="res://Tilesets/pixil-frame-0.png" id="1_ajmn0"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_vbuwx"]
 [ext_resource type="FontFile" uid="uid://dyif6uwvlp6f7" path="res://Knight Souls.otf" id="2_rco8t"]
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b7pwc"]
+load_path = "res://.godot/imported/pixil-frame-0.png-0e5c0eb138aef7051b55d00068a7a87b.ctex"
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_418ed"]
-texture = ExtResource("1_ajmn0")
+texture = SubResource("CompressedTexture2D_b7pwc")
 modulate_color = Color(0.321728, 0.321728, 0.321728, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6kpfj"]
@@ -48,6 +50,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 4.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_418ed")
